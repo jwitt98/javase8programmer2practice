@@ -9,7 +9,9 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.Deque;
 import java.util.ArrayDeque;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.Iterator;
 
 /**
  *
@@ -22,7 +24,18 @@ public class Collections {
         ListTests lt = new ListTests();
         lt.populate();
         lt.collect();
-        lt.print();
+        lt.printAl();
+        lt.printAll();
+        
+        Integer[] integerArray = {1,2,3};
+        List<Integer> integerList = Arrays.asList(integerArray);
+        //java.lang.UnsupportedOperationException
+        //integerList.add(10);
+        integerList.set(2, 10);//OK
+        for(Integer integer : integerArray){
+            //integerArray now contains [1,2,10]
+            System.out.println("integerArray contains: " + integer);//prints 1,2,10
+        }
         
     }
     
@@ -53,7 +66,15 @@ class ListTests{
         collections.add(arrayDeque);
     }
     
-    public void print(){
+    public void printAl(){
+        Iterator itr = arrayList.iterator();
+        while(itr.hasNext()){
+            System.out.println("Iterated arraylist = " + itr.next());
+        }
+        System.out.println();
+    }
+    
+    public void printAll(){
         for(Object o : collections){
             if(o instanceof Collection){
                 System.out.println("Type is: " + o.getClass().getSimpleName());
