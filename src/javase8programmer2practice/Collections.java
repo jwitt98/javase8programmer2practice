@@ -37,6 +37,16 @@ public class Collections {
             System.out.println("integerArray contains: " + integer);//prints 1,2,10
         }
         
+        Set<String> treeSet = new TreeSet<>();
+        treeSet.add("c");
+        treeSet.add("b");
+        treeSet.add("a");
+        treeSet.add("b");
+        for(String str : treeSet){
+            System.out.print(str);//prints abc
+        }
+        System.out.println();
+        
     }
     
 }
