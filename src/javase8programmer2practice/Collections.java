@@ -48,6 +48,18 @@ public class Collections {
         }
         System.out.println();
         
+        NavigableMap<Integer,String> nm = new TreeMap<>();
+        nm.put(10, "Ten");
+        nm.put(20, "Twenty");
+        nm.put(30, "Thirty");
+        nm.put(40, "Forty");
+
+        System.out.println(nm.ceilingEntry(25));
+        
+        Deque<Double> dq = new ArrayDeque<>(3);
+        dq.addLast(10.1); dq.addLast(2.2); dq.addFirst(1.1); dq.add(34.0); dq.addLast(3.7);
+        dq.forEach(d->System.out.print(d + "  " ));//prints 1.1  10.1  2.2  34.0  3.7  
+        System.out.println();
     }
     
 }
