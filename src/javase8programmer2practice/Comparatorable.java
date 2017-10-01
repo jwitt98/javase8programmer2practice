@@ -15,11 +15,11 @@ public class Comparatorable {
         Employee Howdy = new Employee(1002, "Howdy", "Doodey", LocalDate.of(1956, Month.JANUARY, 1));
         
         Employee[] employees = {Howdy, Frank, Susan};
-        Arrays.sort(employees);
+        Arrays.sort(employees);//All elements in the array must implement the Comparable interface
         
         for(Employee employee:employees){
             System.out.print(employee.getEFName() + "  ");//prints Howdy  Susan  Frank 
-            //natural sort order is LocalDate oldest to newest
+            //natural sort order is LocalDate oldest to newest determined by compareTo method
         }
         System.out.println("\n");
         
@@ -38,6 +38,13 @@ public class Comparatorable {
             //sorted lexigraphically by last name
         }
         System.out.println("\n");
+        
+        Arrays.sort(employees, new CompareELNameRev());
+        
+        for(Employee employee : employees){
+            System.out.print(employee.getELName() + " ");// prints Riley Jones Doodey (reverse order)
+        }
+        System.out.println();
     }
 }
 
@@ -80,5 +87,12 @@ class CompareELName implements Comparator<Employee>{
     @Override
     public int compare(Employee e1, Employee e2){
         return e1.getELName().compareTo(e2.getELName());
+    }
+}
+
+class CompareELNameRev implements Comparator<Employee>{
+    @Override
+    public int compare(Employee e1, Employee e2){
+        return e2.getELName().compareTo(e1.getELName());
     }
 }
