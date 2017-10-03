@@ -19,11 +19,11 @@ public class CollectionsStreamsFilters {
         al.add("zero"); al.add("one"); al.add("two"); al.add("three"); al.add("four");
         
         StreamMaker sm = new StreamMaker(al);
-        Optional opt = sm.getStream().findAny();
-        opt.ifPresent(System.out::println);
+        //Optional opt = sm.getStream().findAny();
+        //opt.ifPresent(System.out::println);
         
-        opt = sm.getStream().findFirst();
-        opt.ifPresent(System.out::println);
+        //opt = sm.getStream().findFirst();
+        //opt.ifPresent(System.out::println);
         
     }
 }
@@ -36,8 +36,8 @@ class StreamMaker<T>{
         stream = list.stream();
     }
     
-    Stream<T> getStream(){
-        return stream;
-    }
+    //Stream<T> getStream(){
+        //return stream;
+    //}
     
 }
