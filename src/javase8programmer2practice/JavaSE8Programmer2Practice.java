@@ -28,7 +28,9 @@ public class JavaSE8Programmer2Practice {
         //Interfacifier.main(args);
         //Lambdafier.main(args);
         //Genericer.main(args);
-        Collections.main(args);
+        //Collections.main(args);
+        //Comparatorable.main(args);
+        CollectionsStreamsFilters.main(args);
     }
     
 }
