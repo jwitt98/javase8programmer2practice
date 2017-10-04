@@ -30,7 +30,8 @@ public class JavaSE8Programmer2Practice {
         //Genericer.main(args);
         //Collections.main(args);
         //Comparatorable.main(args);
-        CollectionsStreamsFilters.main(args);
+        //CollectionsStreamsFilters.main(args);
+        ForEachMethods.main(args);
     }
     
 }
