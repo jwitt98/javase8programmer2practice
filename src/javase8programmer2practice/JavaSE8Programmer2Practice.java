@@ -31,7 +31,8 @@ public class JavaSE8Programmer2Practice {
         //Collections.main(args);
         //Comparatorable.main(args);
         //CollectionsStreamsFilters.main(args);
-        ForEachMethods.main(args);
+        //ForEachMethods.main(args);
+        StreamInterfaceStreamPipeline.main(args);
     }
     
 }
