@@ -25,8 +25,8 @@ public class StreamInterfaceStreamPipeline {
         intStream.sorted().forEach(i -> System.out.print(i + " "));//prints 1 2 3 4 5 6 7 8 9 10
         System.out.println();
         
-        intStream = Stream.of(1,2,3,4,5,6,7,8,9,10);//prints 1 4 9 16 25 36 49 64 81 100 
-        intStream.map(i -> i *i).forEach(i -> System.out.print(i + " "));
+        intStream = Stream.of(1,2,3,4,5,6,7,8,9,10);
+        intStream.map(i -> i *i).forEach(i -> System.out.print(i + " "));//prints 1 4 9 16 25 36 49 64 81 100 
         System.out.println();
         
         intStream = Stream.of(1,2,3,4,5,6,7,8,9,10);
@@ -48,7 +48,7 @@ public class StreamInterfaceStreamPipeline {
         System.out.println();
         
         Stream<Integer> streamOfInts = Stream.of(1,2,3,4,5,6,7,8,9,10);
-        //Intream deosn't have an overlaoded collect method that takes a Collector like Stream does
+        //Intream deosn't have an overloaded collect method that takes a Collector like Stream does
         intList = streamOfInts.collect(Collectors.toList());
         intList.subList(2, 8).forEach(j -> System.out.print(j + " "));//prints 3 4 5 6 7 8
         System.out.println();
