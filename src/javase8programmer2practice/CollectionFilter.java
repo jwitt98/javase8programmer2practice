@@ -4,6 +4,7 @@ import java.util.stream.IntStream;
 import java.util.TreeSet;
 import java.util.Comparator;
 import java.util.Optional;
+import java.util.regex.Pattern;
 
 /**
  *
@@ -33,6 +34,13 @@ public class CollectionFilter {
         
         Optional<Tree> opt2 = ts3.stream().min(new WoodTypeComparator());
         opt2.ifPresent(i -> System.out.print(i.type + " "));//prints CHERRY
+        System.out.println();
+        
+        String[] strings = Pattern.compile("").splitAsStream("Marginal Mice Make More Movies")
+                .filter(str -> !str.equals(" ")).distinct().toArray(String[]::new);
+        for(String str: strings){
+            System.out.print(str);//prints Marginlcekovs
+        }
         System.out.println();
 
         

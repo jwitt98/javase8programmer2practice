@@ -33,7 +33,8 @@ public class JavaSE8Programmer2Practice {
         //CollectionsStreamsFilters.main(args);
         //ForEachMethods.main(args);
         //StreamInterfaceStreamPipeline.main(args);
-        CollectionFilter.main(args);
+        //CollectionFilter.main(args);
+        MethodReferences.main(args);
     }
     
 }
