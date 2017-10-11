@@ -19,8 +19,8 @@ public class MethodReferences {
         
         String[] strs = {"these", "are", "some", "lowercase", "strings"};
         List<String> strLst = Arrays.asList(strs);
-        strLst.stream().map(StringCapitalizer::strToUpper).forEach( str -> System.out.print(str + " "));//method reference
-        //prints THESE ARE SOME LOWERCASE STRINGS
+        strLst.stream().map(StringCapitalizer::strToUpper).map(i -> i.equals("ARE")?"WERE":i)
+                .forEach( str -> System.out.print(str + " "));//prints THESE WERE SOME LOWERCASE STRINGS 
         System.out.println();
         
     }    
