@@ -5,6 +5,8 @@
  */
 package javase8programmer2practice;
 
+import java.io.IOException;
+
 /**
  *
  * @author jwitt98
@@ -34,7 +36,8 @@ public class JavaSE8Programmer2Practice {
         //ForEachMethods.main(args);
         //StreamInterfaceStreamPipeline.main(args);
         //CollectionFilter.main(args);
-        MethodReferences.main(args);
+        //MethodReferences.main(args);
+        BuiltInFunctionalInterfaceUser.main(args);
+        
     }
-    
 }
