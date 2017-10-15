@@ -37,7 +37,7 @@ public class JavaSE8Programmer2Practice {
         //StreamInterfaceStreamPipeline.main(args);
         //CollectionFilter.main(args);
         //MethodReferences.main(args);
-        BuiltInFunctionalInterfaceUser.main(args);
-        
+        //BuiltInFunctionalInterfaceUser.main(args);
+        PrimitiveFunctionalInterfaceUser.main(args);
     }
 }
