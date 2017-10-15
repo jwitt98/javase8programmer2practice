@@ -17,9 +17,7 @@ public class PrimitiveFunctionalInterfaceUser {
         System.out.println("Contains an even number = " + ipt.testInt(i -> i % 2 == 0));//prints Contains an even number = true
         System.out.println("Contains an odd number = " + ipt.testInt(i -> i % 2 != 0));//prints Contains an odd number = false
         IntStream.range(1, 20).filter(i -> i > 10).forEach(i -> System.out.print(i + " "));//prints 11 12 13 14 15 16 17 18 19 
-        System.out.println();
-        
-        
+        System.out.println();    
         
     }
     
