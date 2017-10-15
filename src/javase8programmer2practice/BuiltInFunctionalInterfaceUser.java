@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
+import java.util.regex.Pattern;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -59,9 +60,10 @@ public class BuiltInFunctionalInterfaceUser {
         
         Long[] lArray = {100L,200L,300L,400L,500L,600L,700L,800L,900L};
         List<Long> lList = new ArrayList<>(Arrays.asList(lArray));
-        SupplierTester<Long> spl = new SupplierTester<>(lList);
-        Long lng = spl.supply(()-> 999L);
-        System.out.println(lng);
+        SupplierTester<Long> splIndex = new SupplierTester<>(lList);
+        int index = splIndex.supply(()-> 400L);
+        System.out.println(index);//prints 3
+        
     }
     
 }
@@ -131,10 +133,10 @@ class SupplierTester<T>{
         this.list = list;
     }
     
-    public T supply(Supplier<T> sup){
+    public int supply(Supplier<T> sup){
         
-        T type = sup.get();
+       T type = sup.get();
         
-        return type;
+        return list.indexOf(type);
     }
 }
