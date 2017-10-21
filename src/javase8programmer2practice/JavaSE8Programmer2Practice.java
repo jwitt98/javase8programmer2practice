@@ -39,5 +39,6 @@ public class JavaSE8Programmer2Practice {
         //MethodReferences.main(args);
         //BuiltInFunctionalInterfaceUser.main(args);
         PrimitiveFunctionalInterfaceUser.main(args);
+       
     }
 }
