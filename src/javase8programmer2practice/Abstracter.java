@@ -7,10 +7,10 @@ package javase8programmer2practice;
  */
 public abstract class Abstracter {
     public static void main(String[] args){
-        MotorVehicle pickupTruck = new Truck("Pickup", 4500);
+        MotorVehicle pickupTruck = new Truck2("Pickup", 4500);
         pickupTruck.startEngine();
         pickupTruck.moveForward(45);
-        MotorVehicle dumpTruck = new Truck("Dump truck", 9400);
+        MotorVehicle dumpTruck = new Truck2("Dump truck", 9400);
         dumpTruck.startEngine();
         dumpTruck.moveForward(37);
     }
@@ -45,9 +45,9 @@ abstract class MotorVehicle{
     }
 }
 
-class Truck extends MotorVehicle{
+class Truck2 extends MotorVehicle{
     
-    public Truck(String bodyType, int ccs){
+    public Truck2(String bodyType, int ccs){
         setNumWheels(4);
         setBodyType(bodyType);
         setCcs(ccs);

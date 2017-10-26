@@ -5,6 +5,7 @@
  */
 package javase8programmer2practice;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
@@ -38,7 +39,10 @@ public class JavaSE8Programmer2Practice {
         //CollectionFilter.main(args);
         //MethodReferences.main(args);
         //BuiltInFunctionalInterfaceUser.main(args);
-        PrimitiveFunctionalInterfaceUser.main(args);
-       
+        //PrimitiveFunctionalInterfaceUser.main(args);
+        //BinaryFunctionalInterfaceUser.main(args);
+        //UnaryOperatorUser.main(args);
+        MapPeeker.main(args);
+        
     }
 }

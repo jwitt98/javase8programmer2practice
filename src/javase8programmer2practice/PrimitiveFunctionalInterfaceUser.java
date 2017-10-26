@@ -3,8 +3,9 @@ package javase8programmer2practice;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
+import java.util.Random;
+import java.util.function.BooleanSupplier;
 import java.util.function.DoubleToIntFunction;
 import java.util.function.IntConsumer;
 import java.util.function.IntPredicate;
@@ -47,6 +48,11 @@ public class PrimitiveFunctionalInterfaceUser {
         oict.consumeObjInt((i,j)->System.out.print(i + " " + j + " | "));
         //prints Consumed 2 | Consumed 4 | Consumed 6 | Consumed 8 | Consumed 10 |
         System.out.println();
+        
+        BooleanSupplierTester bst = new BooleanSupplierTester();
+        Random r = new Random();
+        boolean result = bst.getResult(()-> r.nextBoolean());
+        System.out.println("Result is : " + result);//prints Result is : false/true randomly
         
     }
     
@@ -134,3 +140,9 @@ class ObjIntConsumerTester{
     }
 }
 
+class BooleanSupplierTester{
+    
+    public boolean getResult(BooleanSupplier bs){
+        return bs.getAsBoolean();
+    }
+}
