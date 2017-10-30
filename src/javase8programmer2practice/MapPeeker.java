@@ -23,6 +23,9 @@ public class MapPeeker {
         //prints 1 2 3 4 5 6 7 8 9 10 
         System.out.println();
         System.out.println(sum);//prints 55
+        
+        System.out.println("1" + "1");//prints 11
+        System.out.println(Integer.valueOf("1") + Integer.valueOf("1"));//prints 2
     }
     
  

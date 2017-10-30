@@ -42,7 +42,9 @@ public class JavaSE8Programmer2Practice {
         //PrimitiveFunctionalInterfaceUser.main(args);
         //BinaryFunctionalInterfaceUser.main(args);
         //UnaryOperatorUser.main(args);
-        MapPeeker.main(args);
-        
+        //MapPeeker.main(args);
+        //StreamSearcher.main(args);
+        //Optionalifier.main(args);
+        StreamCalc.main(args);
     }
 }
