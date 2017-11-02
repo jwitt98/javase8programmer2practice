@@ -46,5 +46,6 @@ public class JavaSE8Programmer2Practice {
         //StreamSearcher.main(args);
         //Optionalifier.main(args);
         StreamCalc.main(args);
+        //DateTest.main(args);
     }
 }
