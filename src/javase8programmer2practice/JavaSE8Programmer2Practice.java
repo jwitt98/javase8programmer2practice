@@ -45,7 +45,9 @@ public class JavaSE8Programmer2Practice {
         //MapPeeker.main(args);
         //StreamSearcher.main(args);
         //Optionalifier.main(args);
-        StreamCalc.main(args);
-        //DateTest.main(args);
+        //StreamCalc.main(args);
+        //StreamSorter.main(args);
+        CollectionSaverAndGrouper.main(args);
+        //Test.main(args);
     }
 }

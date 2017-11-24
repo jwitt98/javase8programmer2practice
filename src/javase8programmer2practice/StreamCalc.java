@@ -58,7 +58,11 @@ public class StreamCalc {
         int min = iss.getMin();
         System.out.println("Min = " + min);//prints Min = 0
         IntConsumer is = iss.andThen(i->System.out.println(i * i));
-        is.accept(5);
+        is.accept(5);//prints 25
+        
+        strStream = Stream.of(strArray);
+        optStr = strStream.reduce((str1,str2)-> str2.concat("-" + str1));
+        optStr.ifPresent(System.out::println);//prints five-four-three-two-one
     }
     
 }
