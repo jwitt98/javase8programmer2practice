@@ -47,7 +47,10 @@ public class JavaSE8Programmer2Practice {
         //Optionalifier.main(args);
         //StreamCalc.main(args);
         //StreamSorter.main(args);
-        CollectionSaverAndGrouper.main(args);
+        //CollectionSaverAndGrouper.main(args);
+        //FlatMapper.main(args);
+        //TryCatchThrower.main(args);
+        CatchMultiCatchFinallyClauser.main(args);
         //Test.main(args);
     }
 }

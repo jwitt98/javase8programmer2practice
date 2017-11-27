@@ -3,63 +3,41 @@ package javase8programmer2practice;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Collections;
+import java.util.List;
 
 public class Test {
+    //resutl desired = '', 'a', 'b', 'aa', 'ab', 'ba', 'bb', 'aaa', ...... upto words having n-literals
+    private static StringBuilder sb = new StringBuilder();
+    private static int length = 0;
+    private static int inner = 0;
+    
     
     public static void main(String[] args){
-        LocalDate ld = LocalDate.parse("12/01/2017", DateTimeFormatter.ofPattern("MM/dd/yyyy"));
-        System.out.println(ld.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));//prints 01/12/2017
         
-        Animal1.main(args);
+        //for(int i=0;i<20;i++){
+            //System.out.print(next() + ", ");
+        //}
+        
+        for(int i=0; i<20; i++){
+            for(int j=0; j < Math.pow(length, 2); j++){
+                for(char a = 'a'; a <= 'b'; a++){
+                    
+                }
+            }
+        }
+
+    }
+    public static StringBuilder next(){
+        
+        
+        return sb;
     }
     
 }
 
 
-class Animal1 {
-    public static void main( String [] args ) {
-        ArrayList<Animal> animalFile = new ArrayList<>();
-
-      
-        animalFile.add(new Animal("name1", "lname1", 30, 10, 0, 1, "or1"));
-        animalFile.add(new Animal("name2", "lname2", 10, 5, 0, 1, "or2"));
-        animalFile.add(new Animal("name3", "lname3", 40, 10, 0, 1, "or3"));
-        animalFile.add(new Animal("name4", "lname4", 20, 10, 0, 1, "or4"));
-        
-        //animalFile.sort(Comparator.comparingInt(a -> a.getMaximumLength()));
-        Collections.sort(animalFile, Collections.reverseOrder(Comparator.comparingInt(a-> a.getMaximumLength())));
-        
-        System.out.print("The 3 largest animals are: ");
-        
-        animalFile.subList(0, 3).stream().forEach(n -> System.out.print(n.animalName + " "));
-        
-    }    
-}
-
-class Animal{
-    public String animalName;
-    public String latinName;
-    public int maximumLength;
-    public int maximumDepth;
-    public int femaleAnimal;
-    public int presenceIndicator;
-    public String oceanicRegions;
-    
-    public Animal(String animalName, String latinName, int maximumLength, int maximumDepth, int femaleAnimal, int presenceIndicator, String oceanicRegions){
-        this.animalName = animalName;
-        this.latinName = latinName;
-        this.maximumDepth = maximumDepth;
-        this.maximumLength = maximumLength;
-        this.femaleAnimal = femaleAnimal;
-        this.presenceIndicator = presenceIndicator;
-        this.oceanicRegions = oceanicRegions;
-    }
-    
-    public int getMaximumLength(){
-        return maximumLength;
-    }
-}
 
 
