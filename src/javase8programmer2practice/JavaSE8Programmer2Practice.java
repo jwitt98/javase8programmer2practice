@@ -45,7 +45,9 @@ public class JavaSE8Programmer2Practice {
         //TryCatchThrower.main(args);
         //CatchMultiCatchFinallyClauser.main(args);
         //TryerWithResources.main(args);
-        ExceptionCustomizer.main(args);
+        //ExceptionCustomizer.main(args);
+        //AssertionTester.main(args);
+        DateTimeInstantPeriodDuration.main(args);
         //Test.main(args);
     }
 }
