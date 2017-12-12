@@ -49,5 +49,6 @@ public class JavaSE8Programmer2Practice {
         //AssertionTester.main(args);
         DateTimeInstantPeriodDuration.main(args);
         //Test.main(args);
+        //InstantTester.main(args);
     }
 }
