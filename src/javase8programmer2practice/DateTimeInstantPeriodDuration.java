@@ -9,6 +9,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Period;
+import java.time.temporal.ChronoUnit;
 
 /**
  *
@@ -37,6 +38,11 @@ public class DateTimeInstantPeriodDuration {
         ldt = ldt.plus(duration);
         //prints Adjusted date and time is: 2018-06-19T20:21:54.031
         System.out.println("Adjusted date and time is: " + ldt);
+        
+        Period newPeriod = Period.ofDays(4);
+        //prints The number of hours in 4 days is 96
+        System.out.println("The number of hours in " + newPeriod.get(ChronoUnit.DAYS) + " days is " 
+                + Duration.ofDays(newPeriod.getDays()).toHours());
         
     }
     

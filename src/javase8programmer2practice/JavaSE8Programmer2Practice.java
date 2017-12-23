@@ -47,8 +47,10 @@ public class JavaSE8Programmer2Practice {
         //TryerWithResources.main(args);
         //ExceptionCustomizer.main(args);
         //AssertionTester.main(args);
-        DateTimeInstantPeriodDuration.main(args);
+        //DateTimeInstantPeriodDuration.main(args);
+        //ZonedDatesTimesDSTFormatter.main(args);
+        //InstantPeriodDurationTemporalUnit.main(args);
+        ConsoleReaderWriter.main(args);
         //Test.main(args);
-        //InstantTester.main(args);
     }
 }
