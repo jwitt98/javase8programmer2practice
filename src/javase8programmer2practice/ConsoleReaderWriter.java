@@ -42,17 +42,24 @@ public class ConsoleReaderWriter {
         System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
         System.out.println("Now we are back to the console");
         
-        //Console console = System.console();//retruns null when runnig from IDE
-        //System.out.println("Type a password");
-        //char[] password = console.readPassword();//thrown NullPointerException when run from IDE
-        //System.out.print("The password you typed is ");
+        Console console = System.console();//retruns null when runnig from IDE
+        System.out.println("Type a password");
+        char[] password = console.readPassword();//thrown NullPointerException when run from IDE
+        System.out.print("The password you typed is ");
         //prints the password typed above when run from command shell
-        //for(char ch : password){
-            //System.out.print(ch);
-        //}
-        //System.out.println();
-        
-        
+        for(char ch : password){
+            System.out.print(ch);
+        }
+        System.out.println();
+        //When run from the command line, prints...
+        //Boolean true, Character B, Decimal 12, Float scientific 3.000000e+04, 
+        //Float decimal 4.600000, Float either 50000.0, Hashcode 6bc7c054, Integer octal 11, 
+        //Intger hex f, String String, Date/Time 12/31/69, line seperator
+        //...all on one line followed by a new line
+        console.printf("Boolean %b, Character %c, Decimal %d, Float scientific %e, "
+                + "Float decimal %f, Float either %g, Hashcode %h, "
+                + "Integer octal %o, Intger hex %x, String %s, Date/Time %tD, line seperator %n"
+                , true, 'B', 12, 3e4, 4.6, 5e4, console, 0x9, 15, "String", 123456L);
         
     }
     

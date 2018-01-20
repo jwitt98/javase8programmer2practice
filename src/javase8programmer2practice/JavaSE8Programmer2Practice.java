@@ -50,7 +50,8 @@ public class JavaSE8Programmer2Practice {
         //DateTimeInstantPeriodDuration.main(args);
         //ZonedDatesTimesDSTFormatter.main(args);
         //InstantPeriodDurationTemporalUnit.main(args);
-        ConsoleReaderWriter.main(args);
+        //ConsoleReaderWriter.main(args);
+        IOFundamentals.main(args);
         //Test.main(args);
     }
 }
