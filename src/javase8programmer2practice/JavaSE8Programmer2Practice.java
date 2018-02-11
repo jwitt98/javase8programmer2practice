@@ -51,7 +51,10 @@ public class JavaSE8Programmer2Practice {
         //ZonedDatesTimesDSTFormatter.main(args);
         //InstantPeriodDurationTemporalUnit.main(args);
         //ConsoleReaderWriter.main(args);
-        IOFundamentals.main(args);
+        //IOFundamentals.main(args);
+        //Pathifier.main(args);
+        //FilesTester.main(args);
+        Nio2Streamer.main(args);
         //Test.main(args);
     }
 }
