@@ -52,8 +52,8 @@ public class JavaSE8Programmer2Practice {
         //Pathifier.main(args);
         //FilesTester.main(args);
         //Nio2Streamer.main(args);
-        RunnableCallableExcecutorService.main(args);
-        //ThreadingProblemMaker.main(args);
+        //RunnableCallableExcecutorService.main(args);
+        ThreadingProblemMaker.main(args);
         //Test.main(args);
     }
 }
