@@ -53,13 +53,16 @@ public class ThreadingProblemMaker {
         
        //new Thread(()-> A.waiter(B)).start();      
        //new Thread(()-> B.waiter(A)).start();
-       //Uncommenting the 2 lines above will cause a dealock condition most of the time with output:
+       //Un-commenting the 2 lines above will cause a deadlock condition most of the time with output:
        //B will make A wait now
        //A will make B wait now
        
         int numThreads = 100;
         ExecutorService exec = Executors.newCachedThreadPool(new MyThreadFactory());
-       
+        //Note: Linux ignores Thread priorities
+        //Executing the for loop below on a Windows machine will cause
+        //Takers to dominate the upper part of the output while
+        //Starvers will be primarily towards the end of the output
         for(int i = 0; i < numThreads; i++){
            exec.submit(() -> {});//submit a runnable that does nothing
         }  
