@@ -56,6 +56,8 @@ public class ThreadingProblemMaker {
         //Executing the for loop below on a Windows machine will cause
         //Takers to dominate the upper part of the output while
         //Starvers will be primarily towards the end of the output
+        //Example output: 
+        //Taker Taker Taker Starver Taker Taker Starver Starver Starver Starver 
         for(int i = 0; i < numThreads; i++){
            exec.submit(() -> {});//submit a runnable that does nothing
         }  
