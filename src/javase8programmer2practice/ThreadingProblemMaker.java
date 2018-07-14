@@ -14,8 +14,6 @@ import java.util.concurrent.TimeUnit;
 public class ThreadingProblemMaker {
     
     private final String name;
-    static int takerCount;
-    static int starverCount;
     
     public ThreadingProblemMaker(){
         this("NA");
@@ -35,12 +33,7 @@ public class ThreadingProblemMaker {
     
     public synchronized void doWork(String str){
         try{
-            if(str.startsWith("Taker")){
-                takerCount++;
-            }else if(str.startsWith("Starver")){
-                starverCount++;
-            }
-            System.out.println(str);
+            System.out.print(str + " ");
             Thread.sleep(1000);
         }catch(InterruptedException ie){
             System.err.println(ie.getMessage());
@@ -57,7 +50,7 @@ public class ThreadingProblemMaker {
        //B will make A wait now
        //A will make B wait now
        
-        int numThreads = 100;
+        int numThreads = 10;
         ExecutorService exec = Executors.newCachedThreadPool(new MyThreadFactory());
         //Note: Linux ignores Thread priorities
         //Executing the for loop below on a Windows machine will cause
@@ -73,8 +66,6 @@ public class ThreadingProblemMaker {
             System.err.println(ie.getMessage());
         }
         
-        System.out.println("Number of Takers is: " + takerCount);
-        System.out.println("Number of Starvers is: " + starverCount);
        
     }
     
