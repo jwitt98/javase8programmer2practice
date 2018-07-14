@@ -56,8 +56,10 @@ public class ThreadingProblemMaker {
         //Executing the for loop below on a Windows machine will cause
         //Takers to dominate the upper part of the output while
         //Starvers will be primarily towards the end of the output
-        //Example output: 
+        //Example output on a Windows machine: 
         //Taker Taker Taker Starver Taker Taker Starver Starver Starver Starver 
+        //Example output on a Linux machine:
+        //Starver Taker Starver Taker Taker Starver Starver Taker Starver Taker 
         for(int i = 0; i < numThreads; i++){
            exec.submit(() -> {});//submit a runnable that does nothing
         }  
@@ -67,7 +69,7 @@ public class ThreadingProblemMaker {
         }catch(InterruptedException ie){
             System.err.println(ie.getMessage());
         }
-        
+        System.out.println();
        
     }
     
