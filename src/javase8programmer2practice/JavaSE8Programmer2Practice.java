@@ -53,7 +53,9 @@ public class JavaSE8Programmer2Practice {
         //FilesTester.main(args);
         //Nio2Streamer.main(args);
         //RunnableCallableExcecutorService.main(args);
-        ThreadingProblemMaker.main(args);
+        //ThreadingProblemMaker.main(args);
+        //AtomicSynchronizer.main(args);
+        ConcurrentCollections.main(args);
         //Test.main(args);
     }
 }
