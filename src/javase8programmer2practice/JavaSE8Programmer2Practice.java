@@ -55,7 +55,8 @@ public class JavaSE8Programmer2Practice {
         //RunnableCallableExcecutorService.main(args);
         //ThreadingProblemMaker.main(args);
         //AtomicSynchronizer.main(args);
-        ConcurrentCollections.main(args);
+        //ConcurrentCollections.main(args);
+        ParallelForkJoin.main(args);
         //Test.main(args);
     }
 }
